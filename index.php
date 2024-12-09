@@ -23,42 +23,49 @@ curl_close($ch);
 </head>
 
 <main>
+<h1 style="text-align: center;">Estrenos de Marvel del 2025</h1>
     <section>
-        <img src="<?= $data["poster_url"]; ?>" width="300" alt="Poster de <?= $data["title"]; ?>"
-        style="border-radius: 16px;" />
+        <div>
+            <img src="<?= $data["poster_url"]; ?>" width="300" alt="Poster de <?= $data["title"]; ?>" 
+            style="border-radius: 16px;" />
+            <h3><?= $data["title"]; ?> Se Estrena en <?= $data["days_until"]; ?> Días</h3>
+            <p>Fecha de Estreno: <?= $data["release_date"]; ?></p>
+        </div>
+        
+        <div>
+            <img src="<?= $data["following_production"]["poster_url"]; ?>" width="300" alt="Poster de <?= $data["following_production"]["title"]; ?>" 
+            style="border-radius: 10px;" />
+            <h3><?= $data["following_production"]["title"]; ?> Se Estrena en <?= $data["following_production"]["days_until"]; ?> Días</h3>
+            <p>Fecha de Estreno: <?= $data["following_production"]["release_date"]; ?></p>
+        </div>
     </section>
-    <hgroup>
-        <h3><?= $data["title"]; ?> Se Estrena en <?= $data["days_until"]; ?> dias </h3>
-        <p>Fecha de Estreno: <?= $data["release_date"]; ?></p>
-        <p>La siguiente es <?= $data["following_production"]["title"]; ?></p>
-    </hgroup>
 </main>
 
+
 <style>
-    :root {
-        color-scheme: light dark;
-    }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-    body {
-        display: grid;
-        place-content: center;
-    }
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
 
-    img{
-        margin: 0 auto;
-    }
+hgroup {
+    text-align: center;
+}
 
-    section{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-    hgroup{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
+main h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
 </style>
-
