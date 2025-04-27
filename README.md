@@ -1,4 +1,5 @@
 Proyecto de Web-App: Próxima Película de Marvel en Estrenarse
 
-Este proyecto lo desarrollé para repasar los fundamentos de PHP.
-La aplicación está construida en PHP 8, y como framework para los estilos utilicé Pico CSS.
+Este es uno de mis proyectos personales: una página dedicada a los próximos estrenos de películas, desarrollada completamente en PHP 8.
+Con esta aplicación combiné mi pasión por el cine con mis habilidades de programación, creando una plataforma funcional, ligera y atractiva.
+Este proyecto también me sirvió para repasar y reforzar los fundamentos de PHP, aplicándolos en un contexto real y creativo.
